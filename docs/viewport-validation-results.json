@@ -1,0 +1,130 @@
+[
+  {
+    "check": "gui_edit_checkpoint",
+    "revision": "a0466aa9e8c24d2e86ff107f5dab59a8"
+  },
+  {
+    "check": "front",
+    "control": {
+      "view_perspective": "ORTHO",
+      "target": [
+        -2.999999523162842,
+        3.2782554626464844e-07,
+        0.0
+      ],
+      "distance": 6.0,
+      "rotation": [
+        0.7071067690849304,
+        0.7071067690849304,
+        -0.0,
+        -0.0
+      ],
+      "shading": "SOLID",
+      "selected": [
+        "ViewportRecoveryProbe"
+      ],
+      "frame": 17,
+      "graphics_renderer": "llvmpipe (LLVM 15.0.6, 256 bits)",
+      "graphics_vendor": "Mesa/X.org",
+      "graphics_version": "4.5 (Core Profile) Mesa 22.3.6"
+    },
+    "screenshot": {
+      "path": "artifacts/viewport-2685053bf2c9406496bca7bf7bd611ab.png",
+      "source": "virtual_display",
+      "width": 1280,
+      "height": 800,
+      "graphics_renderer": "llvmpipe (LLVM 15.0.6, 256 bits)"
+    },
+    "sha256": "64b81fb2267c12020ecf67a43ff211a1cb81e0e1bf7cfb7fd37d10b5ca10931d"
+  },
+  {
+    "check": "wire",
+    "control": {
+      "view_perspective": "PERSP",
+      "target": [
+        -2.999999523162842,
+        3.2782554626464844e-07,
+        0.0
+      ],
+      "distance": 6.0,
+      "rotation": [
+        0.7791920900344849,
+        0.4964001178741455,
+        0.20561566948890686,
+        0.3227519392967224
+      ],
+      "shading": "WIREFRAME",
+      "selected": [
+        "ViewportRecoveryProbe"
+      ],
+      "frame": 17,
+      "graphics_renderer": "llvmpipe (LLVM 15.0.6, 256 bits)",
+      "graphics_vendor": "Mesa/X.org",
+      "graphics_version": "4.5 (Core Profile) Mesa 22.3.6"
+    },
+    "screenshot": {
+      "path": "artifacts/viewport-dc29f670b7574493a0d286dcb894c17f.png",
+      "source": "virtual_display",
+      "width": 1280,
+      "height": 800,
+      "graphics_renderer": "llvmpipe (LLVM 15.0.6, 256 bits)"
+    },
+    "sha256": "6a84a3d5ebfc6428a19366ff6d7a4f2e8e47258aeb936bdb3a522a8c8f78e1b2"
+  },
+  {
+    "check": "orbit_pan_zoom",
+    "result": {
+      "view_perspective": "PERSP",
+      "target": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "distance": 5.0,
+      "rotation": [
+        0.825943112373352,
+        0.4768584966659546,
+        0.15035291016101837,
+        0.2604188621044159
+      ],
+      "shading": "WIREFRAME",
+      "selected": [
+        "ViewportRecoveryProbe"
+      ],
+      "frame": 17,
+      "graphics_renderer": "llvmpipe (LLVM 15.0.6, 256 bits)",
+      "graphics_vendor": "Mesa/X.org",
+      "graphics_version": "4.5 (Core Profile) Mesa 22.3.6"
+    }
+  },
+  {
+    "check": "gui_timeout_recovery",
+    "result": {
+      "view_perspective": "ORTHO",
+      "target": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "distance": 17.986562728881836,
+      "rotation": [
+        1.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "shading": "SOLID",
+      "selected": [
+        "ViewportRecoveryProbe"
+      ],
+      "frame": 1,
+      "graphics_renderer": "llvmpipe (LLVM 15.0.6, 256 bits)",
+      "graphics_vendor": "Mesa/X.org",
+      "graphics_version": "4.5 (Core Profile) Mesa 22.3.6"
+    }
+  },
+  {
+    "check": "gui_file_load_timer_survives",
+    "passed": true
+  }
+]

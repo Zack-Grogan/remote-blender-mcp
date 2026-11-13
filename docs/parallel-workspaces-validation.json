@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-13",
+  "boundary": "Codex orchestration; MCP resource primitives only",
+  "checks": {
+    "separate_sandbox_and_volume_same_project": true,
+    "overlapping_remote_jobs": true,
+    "foreign_job_id_rejected": true,
+    "identical_remote_filenames_isolated": true,
+    "both_agent_deliveries_and_cleanup": true,
+    "independent_workspace_recovery": true,
+    "stopping_one_does_not_stop_sibling": true
+  },
+  "overlapping_job_intervals": [
+    {
+      "marker": "red",
+      "started": 1794557619.3387587,
+      "finished": 1794557627.3394582
+    },
+    {
+      "marker": "blue",
+      "started": 1794557619.4595199,
+      "finished": 1794557627.4602172
+    }
+  ],
+  "workers": [
+    {
+      "item": "red",
+      "project": "parallel-ddadb36c2d09",
+      "workspace_id": "4c034ec5-5f6d-4dd7-ba40-a74095f4bb72",
+      "session_id": "b54a2d89-7349-4e9e-b5f4-351484dd558e",
+      "sandbox_id": "sb-01M79ZG67VJ4VC0JK4WCZSW3C3",
+      "volume": "rbm-i_4c034ec55f6d4dd7ba40a74095f4bb72",
+      "status": "passed",
+      "artifacts": {
+        "render.png": {
+          "path": "/Users/zgrogan/.t3/projects/remote-blender-mcp/.validation/parallel-workspaces/4c034ec5-5f6d-4dd7-ba40-a74095f4bb72/render.png",
+          "sha256": "20db1256cef5d24d9159478efaa2a4d07e4009bea2d53fcecc323e0e201c93d3",
+          "size": 76903
+        },
+        "scene.blend": {
+          "path": "/Users/zgrogan/.t3/projects/remote-blender-mcp/.validation/parallel-workspaces/4c034ec5-5f6d-4dd7-ba40-a74095f4bb72/scene.blend",
+          "sha256": "cda33edf41761abb6924824dce14fd5ee56a8a7bccd155285175f196aee27052",
+          "size": 461490
+        }
+      }
+    },
+    {
+      "item": "blue",
+      "project": "parallel-ddadb36c2d09",
+      "workspace_id": "c110ca39-1abe-4ad6-80b8-3bb2f9ce6d56",
+      "session_id": "8f2b81b9-7fc8-4d80-a17f-0ce99116e685",
+      "sandbox_id": "sb-01M79ZG67WRDZV6BST4YM5NDBV",
+      "volume": "rbm-i_c110ca391abe4ad680b83bb2f9ce6d56",
+      "status": "passed",
+      "artifacts": {
+        "render.png": {
+          "path": "/Users/zgrogan/.t3/projects/remote-blender-mcp/.validation/parallel-workspaces/c110ca39-1abe-4ad6-80b8-3bb2f9ce6d56/render.png",
+          "sha256": "c669bb30ea6808d99fa45711891c4476406c1661f06e46472768742788da1e4d",
+          "size": 75279
+        },
+        "scene.blend": {
+          "path": "/Users/zgrogan/.t3/projects/remote-blender-mcp/.validation/parallel-workspaces/c110ca39-1abe-4ad6-80b8-3bb2f9ce6d56/scene.blend",
+          "sha256": "386acd906c31c293e6a084873d5838b0b174d5f415ecf11b20f1caa94bab5d91",
+          "size": 692145
+        }
+      }
+    }
+  ],
+  "active_validation_sandboxes": 0,
+  "automated_tests_passed": 20
+}

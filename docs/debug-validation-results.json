@@ -1,0 +1,948 @@
+{
+  "date": "2026-11-12",
+  "automated_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "native_gui": {
+    "counts": {
+      "checks": 32,
+      "passed": 32,
+      "failed": 0,
+      "expected_failed_jobs": 3,
+      "harness_input_errors": 1,
+      "native_tool_calls": 54,
+      "unique_native_tools_used": 20,
+      "available_native_tools": 26
+    },
+    "checks": [
+      {
+        "id": "native_inventory",
+        "status": "pass",
+        "evidence_steps": [],
+        "detail": "Confirmed 26 native tools from ALL_TOOLS in this provider context."
+      },
+      {
+        "id": "unique_cpu_gui_session",
+        "status": "pass",
+        "evidence_steps": [
+          "create_session"
+        ],
+        "detail": "Created one unique session. CPU only."
+      },
+      {
+        "id": "environment",
+        "status": "pass",
+        "evidence_steps": [
+          "environment"
+        ],
+        "detail": "Blender 4.5.0, Python 3.11.11, llvmpipe CPU graphics."
+      },
+      {
+        "id": "export_api_search",
+        "status": "pass",
+        "evidence_steps": [
+          "api_export_query"
+        ],
+        "detail": "Export search lists installed export operators."
+      },
+      {
+        "id": "sphere_operator_schema",
+        "status": "pass",
+        "evidence_steps": [
+          "api_sphere_operator"
+        ],
+        "detail": "Real installed operator schema."
+      },
+      {
+        "id": "Object_type_schema",
+        "status": "pass",
+        "evidence_steps": [
+          "api_Object_type"
+        ],
+        "detail": "Returned first 100 of 136 properties with types, defaults and enums."
+      },
+      {
+        "id": "add_mesh_operator",
+        "status": "pass",
+        "evidence_steps": [
+          "add_sphere",
+          "add_sphere_terminal"
+        ],
+        "detail": "Native run_operator added the UV sphere."
+      },
+      {
+        "id": "fixture_python",
+        "status": "pass",
+        "evidence_steps": [
+          "build_test_fixture",
+          "build_test_fixture_terminal"
+        ],
+        "detail": "Created the named mesh fixture, subdivision, node material, Geometry Nodes group, animation and small armature."
+      },
+      {
+        "id": "mesh_inspection",
+        "status": "pass",
+        "evidence_steps": [
+          "inspect_mesh"
+        ],
+        "detail": "266 vertices, 552 edges, 288 polygons, UVMap."
+      },
+      {
+        "id": "modifier_inspection",
+        "status": "pass",
+        "evidence_steps": [
+          "inspect_mesh"
+        ],
+        "detail": "Inspector returned both modifiers and the Geometry Nodes group."
+      },
+      {
+        "id": "material_inspection",
+        "status": "pass",
+        "evidence_steps": [
+          "inspect_mesh"
+        ],
+        "detail": "Inspector returned the assigned node material."
+      },
+      {
+        "id": "animation_inspection",
+        "status": "pass",
+        "evidence_steps": [
+          "inspect_mesh"
+        ],
+        "detail": "Inspector returned the animation action."
+      },
+      {
+        "id": "animation_endpoints",
+        "status": "pass",
+        "evidence_steps": [
+          "isolate_fixture_terminal"
+        ],
+        "detail": "Verified location at frames 1 and 10; returned to frame 1."
+      },
+      {
+        "id": "armature_inspection",
+        "status": "pass",
+        "evidence_steps": [
+          "inspect_armature"
+        ],
+        "detail": "Inspector returned the two-bone parent hierarchy."
+      },
+      {
+        "id": "material_nodes_and_links",
+        "status": "pass",
+        "evidence_steps": [
+          "inspect_shader_nodes"
+        ],
+        "detail": "Real nodes, sockets, defaults and BSDF-to-Surface link."
+      },
+      {
+        "id": "geometry_nodes_and_links",
+        "status": "pass",
+        "evidence_steps": [
+          "inspect_geometry_nodes"
+        ],
+        "detail": "Group Input -> Transform Geometry -> Group Output."
+      },
+      {
+        "id": "dependency_coverage_explicit",
+        "status": "pass",
+        "evidence_steps": [
+          "dependencies"
+        ],
+        "detail": "No fixture dependencies found. Tool explicitly excludes some simulation, sequence and add-on coverage."
+      },
+      {
+        "id": "gltf_api_discovery",
+        "status": "pass",
+        "evidence_steps": [
+          "api_gltf_query",
+          "api_gltf_export_valid_limit",
+          "api_gltf_import"
+        ],
+        "detail": "Found and described both installed glTF operators."
+      },
+      {
+        "id": "new_export_directory",
+        "status": "pass",
+        "evidence_steps": [
+          "prepare_export_terminal"
+        ],
+        "detail": "Remote Python used os.makedirs(exist_ok=False) for the unique export directory."
+      },
+      {
+        "id": "GLB_export_and_file",
+        "status": "pass",
+        "evidence_steps": [
+          "export_glb_terminal",
+          "verify_glb_file"
+        ],
+        "detail": "GLB export finished. Native list_files verified a new 60076-byte file."
+      },
+      {
+        "id": "GLB_reimport_and_scene",
+        "status": "pass",
+        "evidence_steps": [
+          "import_glb_terminal",
+          "scene_after_import"
+        ],
+        "detail": "Imported mesh and rig appear in the scene. Importer also created a bone-shape object."
+      },
+      {
+        "id": "SOLID_viewport",
+        "status": "pass",
+        "evidence_steps": [
+          "viewport_solid_control",
+          "viewport_solid_capture"
+        ],
+        "detail": "Selected and framed mesh/rig in ISO. Inspected actual inline GUI image."
+      },
+      {
+        "id": "MATERIAL_viewport",
+        "status": "pass",
+        "evidence_steps": [
+          "viewport_material_control",
+          "viewport_material_capture",
+          "viewport_material_ready_capture"
+        ],
+        "detail": "Initial capture showed shader compilation. Later capture showed the shaded teal sphere with reflections."
+      },
+      {
+        "id": "missing_object_explicit_failure",
+        "status": "pass",
+        "evidence_steps": [
+          "missing_object_expected_failure"
+        ],
+        "detail": "Expected negative test. Full traceback retained."
+      },
+      {
+        "id": "invalid_operator_explicit_failure",
+        "status": "pass",
+        "evidence_steps": [
+          "invalid_operator_terminal"
+        ],
+        "detail": "Expected negative test. Full traceback retained."
+      },
+      {
+        "id": "python_exception_partial_change_flag",
+        "status": "pass",
+        "evidence_steps": [
+          "intentional_python_exception_terminal",
+          "inspect_partial_change"
+        ],
+        "detail": "Expected exception. Verified actual partial mutation and the explicit flag."
+      },
+      {
+        "id": "native_logs",
+        "status": "pass",
+        "evidence_steps": [
+          "logs_after_expected_failures"
+        ],
+        "detail": "Read native log tail. Caught Python errors are in job tracebacks; native log includes RNA enum warnings."
+      },
+      {
+        "id": "checkpoint_recovery",
+        "status": "pass",
+        "evidence_steps": [
+          "checkpoint_before_failure_terminal",
+          "list_saved_checkpoints",
+          "restore_baseline_terminal",
+          "inspect_restored_mesh"
+        ],
+        "detail": "Restored saved baseline. Partial custom property is absent and Z is back to 1.2."
+      },
+      {
+        "id": "viewport_after_recovery",
+        "status": "pass",
+        "evidence_steps": [
+          "viewport_after_recovery_control",
+          "viewport_after_recovery_capture"
+        ],
+        "detail": "Control and actual inline MATERIAL GUI image passed after restore."
+      },
+      {
+        "id": "final_save_and_native_download",
+        "status": "pass",
+        "evidence_steps": [
+          "save_final_blend_terminal",
+          "verify_final_files",
+          "download_final_blend"
+        ],
+        "detail": "Saved final .blend and downloaded it through native download_file. Local readback confirms size, SHA-256 and BLENDER-v405 header."
+      },
+      {
+        "id": "clean_stop",
+        "status": "pass",
+        "evidence_steps": [
+          "stop_owned_session"
+        ],
+        "detail": "Own session stopped with a durable final checkpoint. No discard was needed."
+      },
+      {
+        "id": "ended_status",
+        "status": "pass",
+        "evidence_steps": [
+          "status_after_termination"
+        ],
+        "detail": "Ended status returned as structured data, not a generic error."
+      }
+    ],
+    "cleanup": {
+      "session_id": "43af1b07-76d2-4073-a402-5bfb1037cfbc",
+      "only_owned_session_touched": true,
+      "stopped": true,
+      "ended_status_verified": true,
+      "discard_unsaved_used": false,
+      "draining_retry_required": false,
+      "final_checkpoint": {
+        "revision": "d5d8befc720c4f0e94f78f0838764563",
+        "path": "/__modal/volumes/vo-Bq7gCKvyESe23GgtSvOWlQ/.rbm/checkpoints/d5d8befc720c4f0e94f78f0838764563.blend",
+        "sha256": "ed1d995b5dcbc6c77ad4c02358c9303d8e20b8a2a817d351e5da9915eb040904",
+        "saved_at": 1794549275.9096808,
+        "blender": "4.5.0"
+      },
+      "storage_deleted": false,
+      "code_or_config_edits": false,
+      "evidence_file": "/Users/zgrogan/.t3/projects/remote-blender-mcp/.validation/debug-native-report.json"
+    },
+    "expected_failure_jobs": [
+      {
+        "step": "missing_object_expected_failure",
+        "job_id": "3b9f3e19-0d1b-48a3-9833-aca1f41d774d",
+        "error": "Traceback (most recent call last):\n  File \"/opt/rbm/worker.py\", line 216, in process_next\n    result = execute(job[\"kind\"], job[\"params\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/rbm/worker.py\", line 54, in execute\n    return inspect(kind, params)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/rbm/inspection.py\", line 78, in inspect\n    raise ValueError(f\"Unknown object: {params['name']}\")\nValueError: Unknown object: NativeDebugMissingObject_d3af1q\n",
+        "partial_change_possible": true
+      },
+      {
+        "step": "invalid_operator_terminal",
+        "job_id": "603aeca7-4c5d-4ffe-8374-7288d4bdc33f",
+        "error": "Traceback (most recent call last):\n  File \"/opt/rbm/worker.py\", line 216, in process_next\n    result = execute(job[\"kind\"], job[\"params\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/rbm/worker.py\", line 75, in execute\n    if not op.poll():\n           ^^^^^^^^^\n  File \"/opt/blender/4.5/scripts/modules/bpy/ops.py\", line 83, in poll\n    return _op_poll(self.idname_py(), C_exec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: Polling operator \"bpy.ops.mesh.native_debug_nonexistent_operator_d3af1q\" error, could not be found\n",
+        "partial_change_possible": true
+      },
+      {
+        "step": "intentional_python_exception_terminal",
+        "job_id": "37003391-9e8a-4c17-afd1-dc575576f677",
+        "error": "Traceback (most recent call last):\n  File \"/opt/rbm/worker.py\", line 216, in process_next\n    result = execute(job[\"kind\"], job[\"params\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/rbm/worker.py\", line 87, in execute\n    exec(compile(params[\"code\"], \"<mcp>\", \"exec\"), namespace)\n  File \"<mcp>\", line 6, in <module>\nRuntimeError: NativeDebug intentional integration exception d3af1q\n",
+        "partial_change_possible": true
+      }
+    ],
+    "artifacts": [
+      {
+        "type": "viewport_solid",
+        "remote_path": "artifacts/viewport-69e45758142b4f80a1e08188239d68d3.png",
+        "visually_inspected": true,
+        "observation": "Actual 1280x800 Blender GUI. Selected teal sphere and two-bone armature visible in ISO view; default cube and imported duplicates overlap the fixture."
+      },
+      {
+        "type": "viewport_material_initial",
+        "remote_path": "artifacts/viewport-166e0af5e3cc4d36bf02857923aff393.png",
+        "visually_inspected": true,
+        "observation": "Actual Blender GUI reports Compiling EEVEE engine shaders; sphere is only an orange outline. This capture does not yet establish material rendering."
+      },
+      {
+        "type": "viewport_material_ready",
+        "remote_path": "artifacts/viewport-5643d108e520449981a07093dc655f22.png",
+        "visually_inspected": true,
+        "observation": "Actual Blender GUI. Shader compilation message cleared. Selected teal sphere shows material-lighting reflections; two-bone armature visible to its right. No default cube obscures the mesh."
+      },
+      {
+        "type": "viewport_after_checkpoint_recovery",
+        "remote_path": "artifacts/viewport-7d0880bb947f4488a11fe29fe9c5c7e0.png",
+        "visually_inspected": true,
+        "observation": "Actual Blender GUI after restore. Teal material sphere and two-bone rig are visible and selected. Sphere is back at Z=1.2; MATERIAL shading works."
+      },
+      {
+        "type": "GLB",
+        "remote_path": "exports/native-debug-20261113054607539-d3af1q/native-debug.glb",
+        "size": 60076
+      },
+      {
+        "type": "blend",
+        "remote_path": "exports/native-debug-20261113054607539-d3af1q/native-debug-final.blend",
+        "local_path": "/tmp/native-debug-20261113054607539-d3af1q-final.blend",
+        "size": 832873,
+        "sha256": "48d9d4b5e1367fa0470a7cc1d5e276c2829d176d6e49b8a2db63699068707915",
+        "local_readback_verified": true,
+        "header": "BLENDER-v405"
+      }
+    ]
+  },
+  "native_final": {
+    "outcome": "passed",
+    "assertions": [
+      {
+        "check": "initial_cpu_headless_worker_ready",
+        "passed": true,
+        "observed": {
+          "session_id": "2bb0333d-24f5-4439-965c-01afb33dfd09",
+          "runtime_hash": "5e68780ed82436a5516769bd3cb31ee46b1cdf60721360f14077161e7e3bb03e",
+          "protocol": 2,
+          "project": "final-native-20261113060531797-t09ptf",
+          "sandbox_id": "sb-01M79R5VM8TQT0M3JW0SEV95TZ",
+          "volume": "rbm-final-native-20261113060531797-t09ptf",
+          "gpu": null,
+          "mode": "headless",
+          "created_at": 1794549935.80739,
+          "lifetime_seconds": 600,
+          "idle_seconds": 180,
+          "worker": {
+            "status": "ready",
+            "pid": 4,
+            "blender": "4.5.0",
+            "protocol": 2,
+            "session_id": "2bb0333d-24f5-4439-965c-01afb33dfd09"
+          }
+        }
+      },
+      {
+        "check": "dynamic_export_format_enum",
+        "passed": true,
+        "observed": {
+          "identifier": "export_format",
+          "type": "ENUM",
+          "description": "Output format. Binary is most efficient, but JSON may be easier to edit later",
+          "readonly": false,
+          "array_length": 0,
+          "default": "",
+          "items_source": "dynamic_callback",
+          "context_dependent": true,
+          "items": [
+            {
+              "identifier": "GLB",
+              "name": "glTF Binary (.glb)"
+            },
+            {
+              "identifier": "GLTF_SEPARATE",
+              "name": "glTF Separate (.gltf + .bin + textures)"
+            }
+          ],
+          "total_items": 2,
+          "items_complete": true
+        }
+      },
+      {
+        "check": "marker_job_succeeded_and_checkpoint_saved",
+        "passed": true,
+        "observed": {
+          "result": {
+            "name": "FinalNativeRecovery",
+            "type": "EMPTY",
+            "location": [
+              1,
+              2,
+              3
+            ]
+          },
+          "checkpoint": {
+            "revision": "043b7e0b3c9e44e39b99d034b23cbf6c",
+            "path": "/__modal/volumes/vo-QCocoMhLdhvF2i909Y7x21/.rbm/checkpoints/043b7e0b3c9e44e39b99d034b23cbf6c.blend",
+            "sha256": "83033f12430ecdf4aebc2faebf33fc2f9dbfda323bf4afe761ff06caf7964155",
+            "saved_at": 1794549956.4762938,
+            "blender": "4.5.0"
+          }
+        }
+      },
+      {
+        "check": "first_session_ended",
+        "passed": true,
+        "observed": "ended"
+      },
+      {
+        "check": "list_checkpoints_after_termination",
+        "passed": true,
+        "observed": [
+          {
+            "revision": "b943e3573aea490fac9035fb0ec70584",
+            "size": 436015,
+            "saved_at": 1794549969
+          },
+          {
+            "revision": "043b7e0b3c9e44e39b99d034b23cbf6c",
+            "size": 436015,
+            "saved_at": 1794549956
+          },
+          {
+            "revision": "544897242e344d308431c7892dbbe9bf",
+            "size": 434695,
+            "saved_at": 1794549937
+          }
+        ]
+      },
+      {
+        "check": "startup_restore_worker_ready",
+        "passed": true,
+        "observed": {
+          "session_id": "051ed32e-fd06-4784-9105-216f8d6f4d52",
+          "runtime_hash": "5e68780ed82436a5516769bd3cb31ee46b1cdf60721360f14077161e7e3bb03e",
+          "protocol": 2,
+          "project": "final-native-20261113060531797-t09ptf",
+          "sandbox_id": "sb-01M79R7G3HTR2HCA8G5HQFGEQ9",
+          "volume": "rbm-final-native-20261113060531797-t09ptf",
+          "gpu": null,
+          "mode": "headless",
+          "created_at": 1794549989.534685,
+          "lifetime_seconds": 600,
+          "idle_seconds": 180,
+          "worker": {
+            "status": "ready",
+            "pid": 4,
+            "blender": "4.5.0",
+            "protocol": 2,
+            "session_id": "051ed32e-fd06-4784-9105-216f8d6f4d52"
+          }
+        }
+      },
+      {
+        "check": "restored_marker_found",
+        "passed": true,
+        "observed": {
+          "name": "FinalNativeRecovery",
+          "type": "EMPTY",
+          "mode": "OBJECT",
+          "parent": null,
+          "location": [
+            1,
+            2,
+            3
+          ],
+          "rotation_euler": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "dimensions": [
+            0,
+            0,
+            0
+          ],
+          "matrix_world": [
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "collections": [
+            "Scene Collection"
+          ],
+          "materials": [],
+          "modifiers": [],
+          "constraints": [],
+          "animation_action": null,
+          "custom_properties": {}
+        }
+      },
+      {
+        "check": "get_environment_succeeded",
+        "passed": true,
+        "observed": {
+          "blender": "4.5.0",
+          "python": "3.11.12",
+          "background": true,
+          "workspace": "/workspace",
+          "addons": [
+            "bl_pkg",
+            "cycles",
+            "io_anim_bvh",
+            "io_curve_svg",
+            "io_mesh_uv_layout",
+            "io_scene_fbx",
+            "io_scene_gltf2",
+            "pose_library"
+          ],
+          "engines": [
+            "BLENDER_EEVEE_NEXT",
+            "CYCLES"
+          ],
+          "engines_complete": false,
+          "gpu_devices": [
+            {
+              "name": "Intel Xeon Platinum 8375C CPU @ 2.90GHz",
+              "type": "CPU",
+              "enabled": false
+            }
+          ],
+          "graphics": null,
+          "capabilities": {
+            "python": true,
+            "viewport": false,
+            "api_discovery": true,
+            "network": false,
+            "desktop_input": false
+          }
+        }
+      },
+      {
+        "check": "get_logs_succeeded",
+        "passed": true,
+        "observed": {
+          "text": "could not get a list of mounted file-systems\nWARN (bpy.rna): source/blender/python/intern/bpy_rna.cc:1354 pyrna_enum_to_py: current value '0' matches no enum in 'EnumProperty', 'export_format', 'default'\nWARN (bpy.rna): source/blender/python/intern/bpy_rna.cc:1354 pyrna_enum_to_py: current value '0' matches no enum in 'EnumProperty', 'export_format', 'default'\ncould not get a list of mounted file-systems\n",
+          "bytes": 408
+        }
+      },
+      {
+        "check": "restored_session_ended",
+        "passed": true,
+        "observed": "ended"
+      }
+    ],
+    "cleanup": {
+      "first_session": {
+        "session_id": "2bb0333d-24f5-4439-965c-01afb33dfd09",
+        "status": "ended",
+        "stopped": true
+      },
+      "restored_session": {
+        "session_id": "051ed32e-fd06-4784-9105-216f8d6f4d52",
+        "status": "ended",
+        "stopped": true
+      },
+      "all_owned_sessions_ended": true,
+      "project_volume_retained": true,
+      "project_volume_note": "stop_session terminates compute and retains the synthetic project volume and checkpoint revisions."
+    }
+  },
+  "lifecycle": [
+    {
+      "check": "create_waits_for_ready",
+      "value": true
+    },
+    {
+      "check": "stdin_request_over_argv_limit",
+      "value": "large request succeeded"
+    },
+    {
+      "check": "render_frame_restored",
+      "value": true
+    },
+    {
+      "check": "queued_cancel_never_executes",
+      "value": true
+    },
+    {
+      "check": "restart_rejects_stale_queue",
+      "value": true
+    },
+    {
+      "check": "shutdown_barrier_pending_save_and_ended_status",
+      "value": true
+    },
+    {
+      "check": "cross_session_restore",
+      "value": true
+    },
+    {
+      "check": "idle_shutdown_saves_unsaved_scene",
+      "value": true
+    },
+    {
+      "check": "idle_checkpoint_readback_and_emergency_stop",
+      "value": true
+    }
+  ],
+  "recovery": {
+    "checksum_failure_refused": true,
+    "ended_diagnostics": true,
+    "archived_checkpoints": true,
+    "explicit_startup_recovery": true,
+    "stopped": true
+  },
+  "gpu_state_restoration": {
+    "environment": {
+      "blender": "4.5.0",
+      "python": "3.11.12",
+      "background": true,
+      "workspace": "/workspace",
+      "addons": [
+        "bl_pkg",
+        "cycles",
+        "io_anim_bvh",
+        "io_curve_svg",
+        "io_mesh_uv_layout",
+        "io_scene_fbx",
+        "io_scene_gltf2",
+        "pose_library"
+      ],
+      "engines": [
+        "BLENDER_EEVEE_NEXT",
+        "CYCLES"
+      ],
+      "engines_complete": false,
+      "gpu_devices": [
+        {
+          "name": "NVIDIA L4",
+          "type": "CUDA",
+          "enabled": true
+        },
+        {
+          "name": "Intel Xeon CPU @ 2.20GHz",
+          "type": "CPU",
+          "enabled": false
+        },
+        {
+          "name": "NVIDIA L4",
+          "type": "OPTIX",
+          "enabled": true
+        }
+      ],
+      "graphics": null,
+      "capabilities": {
+        "python": true,
+        "viewport": false,
+        "api_discovery": true,
+        "network": false,
+        "desktop_input": false
+      }
+    },
+    "render": {
+      "path": "artifacts/2ee2e218324e4fc58d44cdb72681c80f.png",
+      "revision": "834f6643d3d6412ca4bff96c249b3d4b",
+      "device": "CUDA",
+      "devices": [
+        "NVIDIA L4"
+      ],
+      "camera": "Camera",
+      "frame": 7,
+      "width": 128,
+      "height": 128,
+      "samples": 1
+    },
+    "settings_restored": true,
+    "before": {
+      "backend": "NONE",
+      "devices": {
+        "CUDA_NVIDIA L4_0000:00:04": true,
+        "CPU": false,
+        "CUDA_NVIDIA L4_0000:00:04_OptiX": true
+      },
+      "engine": "BLENDER_EEVEE_NEXT",
+      "frame": 1
+    },
+    "after": {
+      "backend": "NONE",
+      "devices": {
+        "CUDA_NVIDIA L4_0000:00:04": true,
+        "CPU": false,
+        "CUDA_NVIDIA L4_0000:00:04_OptiX": true
+      },
+      "engine": "BLENDER_EEVEE_NEXT",
+      "frame": 1
+    }
+  },
+  "gpu_profiles": {
+    "L4": {
+      "render": {
+        "path": "artifacts/d35a0d83852c47218610b3ad46dcf08b.png",
+        "revision": "e1992e6b2dba4e0b93fb3b66b9eaa585",
+        "device": "CUDA",
+        "devices": [
+          "NVIDIA L4"
+        ],
+        "camera": "Camera",
+        "frame": 1,
+        "width": 256,
+        "height": 256,
+        "samples": 4
+      },
+      "stopped": true
+    },
+    "L40S": {
+      "render": {
+        "path": "artifacts/9e9e37071906476fbba2aed6795f7ce1.png",
+        "revision": "bdd07989627b4a86aa22660a4d1d75a8",
+        "device": "CUDA",
+        "devices": [
+          "NVIDIA L40S"
+        ],
+        "camera": "Camera",
+        "frame": 1,
+        "width": 256,
+        "height": 256,
+        "samples": 4
+      },
+      "stopped": true
+    }
+  },
+  "dynamic_enum_final": {
+    "property": {
+      "identifier": "export_format",
+      "type": "ENUM",
+      "description": "Output format. Binary is most efficient, but JSON may be easier to edit later",
+      "readonly": false,
+      "array_length": 0,
+      "default": null,
+      "default_note": "Static default unavailable for this dynamic enum",
+      "items_source": "dynamic_callback",
+      "context_dependent": true,
+      "items": [
+        {
+          "identifier": "GLB",
+          "name": "glTF Binary (.glb)"
+        },
+        {
+          "identifier": "GLTF_SEPARATE",
+          "name": "glTF Separate (.gltf + .bin + textures)"
+        }
+      ],
+      "total_items": 2,
+      "items_complete": true
+    },
+    "no_enum_warnings": true
+  },
+  "independent_followup": {
+    "broad_result": "pass_with_finding",
+    "original_findings": [
+      {
+        "id": "animated_frame_framing",
+        "severity": "minor",
+        "status": "fail",
+        "observation": "frame_selected=true with the animated fixture and rig at frame 24 returned target [-1,0,1.2000000476837158] and distance 5.943077087402344; mesh moved to X=2 and was partly outside the right viewport edge. Repeated command gave the same framing. At frame 1 the full fixture fits.",
+        "job_ids": [
+          "4105d910-07e0-4e71-b58e-dd9c34821fe4",
+          "604159f7-ea5b-47b9-bd4f-57a925ae53f6"
+        ],
+        "source_note": "viewport.py invokes view_selected before scene.frame_set; the combined operation does not guarantee framing at the requested frame. Repeated animated-frame behavior was observed but its further cause was not investigated.",
+        "workaround": "Set a suitable target/distance explicitly or use the verified frame 1 view; this validation did not edit the implementation."
+      }
+    ],
+    "intermediate_regression": {
+      "overall": "FAIL",
+      "requested_animation_time_targeting": "PASS",
+      "target_center_error_frame1": 0,
+      "target_center_error_frame24": 0,
+      "repeat_stability": "PASS",
+      "repeat_target_distance_rotation_exact_match": true,
+      "repeat_screenshot_sha256_identical": true,
+      "mixed_selection_cube_visibility": "PASS",
+      "single_cube_full_visibility": "FAIL",
+      "exact_failures": [
+        {
+          "steps": [
+            1
+          ],
+          "frame": 1,
+          "corner_index": 4,
+          "world": [
+            -3,
+            -1,
+            0
+          ],
+          "xy": [
+            527.9999389648438,
+            -176.60565185546875
+          ],
+          "region": [
+            1056,
+            691
+          ],
+          "inside_corners": 7,
+          "total_corners": 8,
+          "message": "AssertionError: Cube bounding-box corner outside actual VIEW_3D WINDOW region"
+        },
+        {
+          "steps": [
+            2,
+            3
+          ],
+          "frame": 24,
+          "corner_index": 4,
+          "world": [
+            5,
+            -1,
+            0
+          ],
+          "xy": [
+            527.9999389648438,
+            -176.6055450439453
+          ],
+          "region": [
+            1056,
+            691
+          ],
+          "inside_corners": 7,
+          "total_corners": 8,
+          "message": "AssertionError: Cube bounding-box corner outside actual VIEW_3D WINDOW region"
+        }
+      ],
+      "notes": "All 8 corners were projectable and in front of the view in all cases. Frame24 first combined call and repeat use target (4,0,1), not stale frame1 (-4,0,1). Mixed selection target is (0.5,0,1), distance 13.371923446655273; all 8 cube corners inside."
+    },
+    "final_framing_passed": true,
+    "final_stability": {
+      "code": "b_target = [4,0,1]\nc_target = [4,0,1]\nb_distance = 4.64302921295166\nc_distance = 4.64302921295166\nassert all(abs(b_target[i] - c_target[i]) <= 1e-6 for i in range(3)), \"B/C target changed\"\nassert abs(b_distance - c_distance) <= 1e-6, \"B/C distance changed\"\nresult = {\"target_stable\": True, \"distance_stable\": True, \"target_delta\": [c_target[i] - b_target[i] for i in range(3)], \"distance_delta\": c_distance - b_distance, \"tolerance\": 1e-6}\n",
+      "terminal": {
+        "id": "0ce4e917-f81c-4084-b73d-a3584a7b7355",
+        "kind": "python",
+        "params": {
+          "code": "b_target = [4,0,1]\nc_target = [4,0,1]\nb_distance = 4.64302921295166\nc_distance = 4.64302921295166\nassert all(abs(b_target[i] - c_target[i]) <= 1e-6 for i in range(3)), \"B/C target changed\"\nassert abs(b_distance - c_distance) <= 1e-6, \"B/C distance changed\"\nresult = {\"target_stable\": True, \"distance_stable\": True, \"target_delta\": [c_target[i] - b_target[i] for i in range(3)], \"distance_delta\": c_distance - b_distance, \"tolerance\": 1e-6}\n",
+          "checkpoint": false
+        },
+        "timeout": 120,
+        "status": "succeeded",
+        "created_at": 1794555942.860806,
+        "started_at": 1794555942.9042978,
+        "result": {
+          "result": {
+            "target_stable": true,
+            "distance_stable": true,
+            "target_delta": [
+              0,
+              0,
+              0
+            ],
+            "distance_delta": 0,
+            "tolerance": 1e-06
+          },
+          "checkpoint": null
+        },
+        "stdout": "",
+        "stderr": "",
+        "finished_at": 1794555942.9062364
+      }
+    },
+    "final_session": {
+      "session_id": "946c13da-59a1-401e-a015-ce0ccfda7265",
+      "runtime_hash": "688856590556709bb8e91a773db6f0f601dcf2a2c082d855214983d91756b0d9",
+      "protocol": 2,
+      "project": "fit-final-1794555745096-matoi4",
+      "sandbox_id": "sb-01M79XQ8NE62NFVS8DJH4XN2Y3",
+      "volume": "rbm-fit-final-1794555745096-matoi4",
+      "gpu": null,
+      "mode": "gui",
+      "created_at": 1794555749.12341,
+      "lifetime_seconds": 900,
+      "idle_seconds": 180,
+      "worker": {
+        "status": "ready",
+        "pid": 8,
+        "blender": "4.5.0",
+        "protocol": 2,
+        "session_id": "946c13da-59a1-401e-a015-ce0ccfda7265"
+      }
+    },
+    "report_path": ".validation/viewport-fit-final.json",
+    "active_test_sandboxes_after_cleanup": 0
+  }
+}

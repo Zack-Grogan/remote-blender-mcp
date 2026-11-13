@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-12",
+  "transport": "official Python MCP client over stdio",
+  "runs": {
+    "cpu": {
+      "checks": [
+        "create",
+        "inspect",
+        "edit_checkpoint",
+        "render",
+        "inline_mcp_image",
+        "download_png",
+        "upload_png",
+        "packed_dependency",
+        "download_blend",
+        "reopen_uploaded_project",
+        "dependency_readback",
+        "checkpoint_listing",
+        "partial_failure_traceback",
+        "cancel_running",
+        "recovered_saved_scene",
+        "restore_revision",
+        "deadline_recovery",
+        "ready_after_deadline",
+        "stop"
+      ],
+      "render": {
+        "path": "artifacts/7484c70cf9854a96a58157419afe364c.png",
+        "revision": "9745f15c85144305ab547efa37cb6541",
+        "device": "CPU",
+        "devices": [],
+        "camera": "Camera"
+      },
+      "stopped": true
+    },
+    "gpu": {
+      "checks": [
+        "create",
+        "inspect",
+        "edit_checkpoint",
+        "render",
+        "inline_mcp_image",
+        "download_png",
+        "upload_png",
+        "packed_dependency",
+        "download_blend",
+        "partial_failure_traceback",
+        "cancel_running",
+        "recovered_saved_scene",
+        "restore_revision",
+        "stop"
+      ],
+      "render": {
+        "path": "artifacts/be94c459923b4b4e97fc929dc4331443.png",
+        "revision": "02d8871db3b9498c9fc6a85c8573322e",
+        "device": "CUDA",
+        "devices": [
+          "NVIDIA L4"
+        ],
+        "camera": "Camera"
+      },
+      "stopped": true
+    }
+  }
+}

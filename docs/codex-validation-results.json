@@ -1,0 +1,50 @@
+{
+  "client": "codex-cli 0.146.0",
+  "calls": [
+    {
+      "tool": "inspect_scene",
+      "status": "completed",
+      "server": "remote_blender"
+    },
+    {
+      "tool": "execute_python",
+      "status": "completed",
+      "server": "remote_blender"
+    },
+    {
+      "tool": "job_status",
+      "status": "completed",
+      "server": "remote_blender"
+    },
+    {
+      "tool": "control_viewport",
+      "status": "completed",
+      "server": "remote_blender"
+    },
+    {
+      "tool": "viewport_screenshot",
+      "status": "completed",
+      "server": "remote_blender"
+    },
+    {
+      "tool": "control_viewport",
+      "status": "completed",
+      "server": "remote_blender"
+    },
+    {
+      "tool": "viewport_screenshot",
+      "status": "completed",
+      "server": "remote_blender"
+    }
+  ],
+  "result": {
+    "front_image": "artifacts/viewport-f430b8f5b9cc4831b663caa71901bbdc.png",
+    "wire_image": "artifacts/viewport-2faf670ec5a749abba03ebb07f9912b1.png",
+    "visible_difference": "The front image shows a framed, solid-filled square in front orthographic view. The wire image shows the cube's edges in an isometric perspective from farther away.",
+    "success": true
+  },
+  "inline_image_blocks": [
+    1,
+    1
+  ]
+}
